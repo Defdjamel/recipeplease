@@ -9,7 +9,7 @@
 import UIKit
 
 class SearchViewController: UIViewController {
-    var ingredients : [String] = [] //list ingredients enter by user
+   private var ingredients : [String] = [] //list ingredients enter by user
 
     @IBOutlet weak var searchTextField: UITextField! // ingredient user input
     @IBOutlet weak var tableView: UITableView! //ingredients TableView
@@ -65,8 +65,10 @@ extension SearchViewController: UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell",
+                                                 for: indexPath) as! SearchTableViewCell
+        cell.setIngredient(ingredients[indexPath.row])
         
+        return cell
     }
-    
-    
 }

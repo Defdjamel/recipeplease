@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		1A27FB17224A7789009DE7A9 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB16224A7789009DE7A9 /* Favorite.swift */; };
 		1A27FB19224A7EC0009DE7A9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB18224A7EC0009DE7A9 /* SearchViewController.swift */; };
+		1A27FB1B224A8A40009DE7A9 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB1A224A8A40009DE7A9 /* SearchTableViewCell.swift */; };
+		1A27FB1D224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB1C224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift */; };
 		1A8C26C32249512300253A43 /* ListRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C26C22249512300253A43 /* ListRecipesViewController.swift */; };
 		1A8C26C52249513B00253A43 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C26C42249513B00253A43 /* FavoritesViewController.swift */; };
 		1AB7FAEB224977DD00840DA8 /* recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7FAE9224977DD00840DA8 /* recipes.xcdatamodeld */; };
@@ -50,6 +52,8 @@
 /* Begin PBXFileReference section */
 		1A27FB16224A7789009DE7A9 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		1A27FB18224A7EC0009DE7A9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		1A27FB1A224A8A40009DE7A9 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		1A27FB1C224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRecipeTableViewController.swift; sourceTree = "<group>"; };
 		1A8C26C22249512300253A43 /* ListRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRecipesViewController.swift; sourceTree = "<group>"; };
 		1A8C26C42249513B00253A43 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		1AB7FAEA224977DD00840DA8 /* recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = recipes.xcdatamodel; sourceTree = "<group>"; };
@@ -134,15 +138,15 @@
 		1ADDC30822483CD700A6B4D0 /* reciplease */ = {
 			isa = PBXGroup;
 			children = (
-				1ADDC33C224935AE00A6B4D0 /* Cells */,
-				1ADDC342224935AF00A6B4D0 /* Controllers */,
 				1ADDC343224935AF00A6B4D0 /* Defines */,
+				1ADDC342224935AF00A6B4D0 /* Controllers */,
+				1ADDC33C224935AE00A6B4D0 /* Cells */,
+				1ADDC33D224935AF00A6B4D0 /* Views */,
 				1ADDC33F224935AF00A6B4D0 /* Extensions */,
 				1ADDC345224935AF00A6B4D0 /* Manager */,
 				1ADDC33E224935AF00A6B4D0 /* Models */,
 				1ADDC339224935AE00A6B4D0 /* Network */,
 				1ADDC33B224935AE00A6B4D0 /* Storyboards */,
-				1ADDC33D224935AF00A6B4D0 /* Views */,
 				1ADDC30922483CD700A6B4D0 /* AppDelegate.swift */,
 				1AB7FAE9224977DD00840DA8 /* recipes.xcdatamodeld */,
 				1ADDC31222483CD800A6B4D0 /* Assets.xcassets */,
@@ -189,6 +193,7 @@
 		1ADDC33C224935AE00A6B4D0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				1A27FB1A224A8A40009DE7A9 /* SearchTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -223,6 +228,7 @@
 			children = (
 				1A27FB18224A7EC0009DE7A9 /* SearchViewController.swift */,
 				1A8C26C22249512300253A43 /* ListRecipesViewController.swift */,
+				1A27FB1C224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift */,
 				1A8C26C42249513B00253A43 /* FavoritesViewController.swift */,
 			);
 			path = Controllers;
@@ -503,6 +509,8 @@
 				1A27FB17224A7789009DE7A9 /* Favorite.swift in Sources */,
 				1ADDC30A22483CD700A6B4D0 /* AppDelegate.swift in Sources */,
 				1AB7FAEF2249791500840DA8 /* Recipe.swift in Sources */,
+				1A27FB1B224A8A40009DE7A9 /* SearchTableViewCell.swift in Sources */,
+				1A27FB1D224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift in Sources */,
 				1ADDC349224935AF00A6B4D0 /* Network.swift in Sources */,
 				1AB7FAEB224977DD00840DA8 /* recipes.xcdatamodeld in Sources */,
 			);
