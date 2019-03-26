@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 
 class ListRecipesViewController: UIViewController {
-   // var recipes :
+    var recipes : [Recipe] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
