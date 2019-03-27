@@ -23,6 +23,7 @@ class ListRecipesViewController: UIViewController {
         // Do any additional setup after loading the view.
         self.tableView.register(UINib.init(nibName: cellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: cellIdentifier)//register Cell
         searchRecipes()//init first call with ingredients parameters
+    
     }
     
     private func searchRecipes(){
@@ -31,6 +32,7 @@ class ListRecipesViewController: UIViewController {
             self.recipes = recipes
             self.tableView.reloadData()
             self.hideActivity()
+         
             
         }) {//failed!
            self.hideActivity()
@@ -74,7 +76,7 @@ extension ListRecipesViewController: UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 160
+        return 180
     }
 }
 

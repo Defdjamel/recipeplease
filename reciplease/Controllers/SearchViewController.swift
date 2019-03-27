@@ -13,14 +13,15 @@ class SearchViewController: UIViewController {
 
     @IBOutlet weak var searchTextField: UITextField! // ingredient user input
     @IBOutlet weak var tableView: UITableView! //ingredients TableView
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
+   
     
     // MARK: - Action UI
-    
     @IBAction func onClickAdd(_ sender: Any) {
         if let text = searchTextField.text, !text.isEmpty {
             ingredients.append(text)
@@ -49,6 +50,11 @@ class SearchViewController: UIViewController {
         // Pass the selected object to the new view controller.
         if let destination  = segue.destination as? ListRecipesViewController {
             destination.ingredients = self.ingredients
+            
+            //remove back button text
+            let backItem = UIBarButtonItem()
+            backItem.title = ""
+            navigationItem.backBarButtonItem = backItem
         }
     }
     

@@ -50,7 +50,7 @@
                             <constraint firstAttribute="trailing" secondItem="K9V-tn-FSP" secondAttribute="trailing" constant="8" id="vrj-Zl-Ejp"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-BZ-rVg">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-BZ-rVg" customClass="RecipeRateView" customModule="reciplease" customModuleProvider="target">
                         <rect key="frame" x="291" y="8" width="45" height="45"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
