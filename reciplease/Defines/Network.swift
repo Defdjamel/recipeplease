@@ -8,9 +8,12 @@
 
 import UIKit
 
-let Hostname = "https://wzp.solutions"
-let ServiceApi = Hostname + "/tests/ios-custom-icons/"
+let hostname = "https://api.yummly.com/v1"
+let serviceApi = hostname + "/api/"
+let app_key = "2f1e52c26a4c4c1abf8db3603d7768b6"
+let app_id = "2ae70267"
+
 
 struct Api {
-    static let getIcons = ServiceApi + "IconsData.json"
+    static let search_recipes = serviceApi + "recipes"
 }
