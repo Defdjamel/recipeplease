@@ -38,6 +38,9 @@ class Recipe: NSManagedObject {
         
         
         //add images
+        if let imageUrls = dict.object(forKey: "smallImageUrls") as? [String] {
+            ImageUrl.saveImageurls(imageUrls, recipe)
+        }
         
         return recipe
         
@@ -65,6 +68,18 @@ extension Recipe : RecipeInterface {
         }
        
         return content
+    }
+    
+    var imageUrl: String? {
+        if let imageUrls = imageUrls{
+            for imageUrl in imageUrls {
+               if let imageUrl = imageUrl as? ImageUrl{
+                    return imageUrl.url
+                }
+            }
+            
+        }
+        return nil
     }
     
 }

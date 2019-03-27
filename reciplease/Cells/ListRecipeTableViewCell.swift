@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ListRecipeTableViewCell: UITableViewCell {
 
@@ -16,6 +17,8 @@ class ListRecipeTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.recipeImage.layer.masksToBounds = true
+        self.recipeImage.kf.indicatorType = .activity
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,6 +30,14 @@ class ListRecipeTableViewCell: UITableViewCell {
     func setRecipe(_ recipe : RecipeInterface) {
         self.titleLabel.text = recipe.title
         self.subtitleLabel.text = recipe.subtitle
+        if let imageUrl = recipe.imageUrl {
+            let url = URL(string: imageUrl)
+            self.recipeImage.kf.setImage(with: url)
+        }
+        else{
+            self.recipeImage.image = nil
+        }
+        
     }
     
 }

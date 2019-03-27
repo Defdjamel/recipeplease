@@ -19,9 +19,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="344" height="157.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k95-vC-1JS">
-                        <rect key="frame" x="0.0" y="0.0" width="344" height="158"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k95-vC-1JS">
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="157.5"/>
+                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pID-cT-Nfh">
                         <rect key="frame" x="0.0" y="98" width="344" height="59.5"/>
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.56595092024539873" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3A9-Jb-QKZ" firstAttribute="top" secondItem="pID-cT-Nfh" secondAttribute="top" constant="8" id="ABD-tj-FKT"/>
                             <constraint firstAttribute="trailing" secondItem="3A9-Jb-QKZ" secondAttribute="trailing" constant="8" id="AWB-tJ-vzx"/>
@@ -61,6 +61,10 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="pID-cT-Nfh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7XY-PX-dDM"/>
+                    <constraint firstItem="k95-vC-1JS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QQx-qQ-7Po"/>
+                    <constraint firstAttribute="trailing" secondItem="k95-vC-1JS" secondAttribute="trailing" id="T34-oT-Auy"/>
+                    <constraint firstAttribute="bottom" secondItem="k95-vC-1JS" secondAttribute="bottom" id="Wag-KY-HQk"/>
+                    <constraint firstItem="k95-vC-1JS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aMm-rp-YoN"/>
                     <constraint firstAttribute="bottom" secondItem="pID-cT-Nfh" secondAttribute="bottom" id="dJx-Jr-waA"/>
                     <constraint firstAttribute="trailing" secondItem="pID-cT-Nfh" secondAttribute="trailing" id="gAU-AQ-uMX"/>
                     <constraint firstAttribute="trailing" secondItem="Qir-BZ-rVg" secondAttribute="trailing" constant="8" id="i1q-jt-byP"/>

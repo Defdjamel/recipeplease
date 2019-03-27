@@ -11,4 +11,5 @@ import UIKit
 protocol RecipeInterface {
      var title: String? { get }
      var subtitle: String? { get }
+     var imageUrl: String? { get }
 }
