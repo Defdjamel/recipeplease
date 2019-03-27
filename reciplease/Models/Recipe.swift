@@ -32,6 +32,10 @@ class Recipe: NSManagedObject {
         
         //add ingredient
         
+        if let ingredients = dict.object(forKey: "ingredients") as? [String] {
+            Ingredient.saveIngredients(ingredients, recipe)
+        }
+        
         
         //add images
         
@@ -51,7 +55,16 @@ extension Recipe : RecipeInterface {
         return self.name
     }
     var subtitle: String? {//liste ingredient
-        return self.name
+        var content  = ""
+        if let ingredients =  ingredients {
+            for ingredient in ingredients {
+                if let ingredient = ingredient as? Ingredient, let name  = ingredient.name{
+                    content += "\(name) "
+                }
+            }
+        }
+       
+        return content
     }
     
 }

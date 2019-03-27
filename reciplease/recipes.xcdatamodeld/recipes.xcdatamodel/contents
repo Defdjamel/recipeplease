@@ -6,7 +6,6 @@
         <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="favorite" inverseEntity="Recipe" syncable="YES"/>
     </entity>
     <entity name="ImageUrl" representedClassName=".ImageUrl" syncable="YES" codeGenerationType="category">
-        <attribute name="size" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="imageUrls" inverseEntity="Recipe" syncable="YES"/>
     </entity>
@@ -27,6 +26,6 @@
         <element name="Favorite" positionX="-63" positionY="0" width="128" height="88"/>
         <element name="Recipe" positionX="212.74609375" positionY="36.4921875" width="128" height="133"/>
         <element name="Ingredient" positionX="456.48046875" positionY="208.77734375" width="128" height="88"/>
-        <element name="ImageUrl" positionX="203.96875" positionY="297.921875" width="128" height="88"/>
+        <element name="ImageUrl" positionX="203.96875" positionY="297.921875" width="128" height="73"/>
     </elements>
 </model>

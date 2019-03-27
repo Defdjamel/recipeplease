@@ -10,7 +10,20 @@ import UIKit
 import CoreData
 
 class Ingredient: NSManagedObject {
-     static func saveRecipe(_ dict: NSArray) {
+    static func saveIngredients(_ items: [String], _ recipe : Recipe ) {
+        for item in items {
+            //check Duplicate
+            if let list = recipe.ingredients , list.contains(item) {
+            }else{
+                let ingredient = Ingredient(context: AppDelegate.viewContext)
+                ingredient.name = item
+                ingredient.addToRecipes(recipe)
+                
+                try? AppDelegate.viewContext.save()
+            }
+            
+        }
+        
     }
 
 }

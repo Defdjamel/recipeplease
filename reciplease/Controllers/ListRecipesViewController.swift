@@ -74,7 +74,7 @@ extension ListRecipesViewController: UITableViewDataSource{
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        return 160
     }
 }
 
