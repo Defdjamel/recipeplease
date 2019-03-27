@@ -73,8 +73,10 @@ extension Recipe : RecipeInterface {
     var imageUrl: String? {
         if let imageUrls = imageUrls{
             for imageUrl in imageUrls {
-               if let imageUrl = imageUrl as? ImageUrl{
-                    return imageUrl.url
+               if let imageUrl = imageUrl as? ImageUrl, var url =  imageUrl.url {
+                    //remove s90
+                    url  = url.replacingOccurrences(of: "=s90", with: "=s\(sizeImage)")
+                    return url
                 }
             }
             

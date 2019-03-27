@@ -12,6 +12,7 @@ let hostname = "https://api.yummly.com/v1"
 let serviceApi = hostname + "/api/"
 let app_key = "2f1e52c26a4c4c1abf8db3603d7768b6"
 let app_id = "2ae70267"
+let sizeImage = "400"
 
 
 struct Api {
