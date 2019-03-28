@@ -18,6 +18,7 @@
 		1A27FB3A224BD7F0009DE7A9 /* ImageUrl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB39224BD7F0009DE7A9 /* ImageUrl.swift */; };
 		1A27FB3C224C0F18009DE7A9 /* RecipeRateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB3B224C0F18009DE7A9 /* RecipeRateView.swift */; };
 		1A27FB3E224C0F1E009DE7A9 /* RecipeRateView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A27FB3D224C0F1E009DE7A9 /* RecipeRateView.xib */; };
+		1A27FB40224D2189009DE7A9 /* TimeInterval+text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB3F224D2189009DE7A9 /* TimeInterval+text.swift */; };
 		1A8C26C32249512300253A43 /* ListRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C26C22249512300253A43 /* ListRecipesViewController.swift */; };
 		1A8C26C52249513B00253A43 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C26C42249513B00253A43 /* FavoritesViewController.swift */; };
 		1AB7FAEB224977DD00840DA8 /* recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7FAE9224977DD00840DA8 /* recipes.xcdatamodeld */; };
@@ -68,6 +69,7 @@
 		1A27FB39224BD7F0009DE7A9 /* ImageUrl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUrl.swift; sourceTree = "<group>"; };
 		1A27FB3B224C0F18009DE7A9 /* RecipeRateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeRateView.swift; sourceTree = "<group>"; };
 		1A27FB3D224C0F1E009DE7A9 /* RecipeRateView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RecipeRateView.xib; sourceTree = "<group>"; };
+		1A27FB3F224D2189009DE7A9 /* TimeInterval+text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TimeInterval+text.swift"; sourceTree = "<group>"; };
 		1A8C26C22249512300253A43 /* ListRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRecipesViewController.swift; sourceTree = "<group>"; };
 		1A8C26C42249513B00253A43 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		1AB7FAEA224977DD00840DA8 /* recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = recipes.xcdatamodel; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			children = (
 				1ADDC340224935AF00A6B4D0 /* NSObject+Extension.swift */,
 				1ADDC341224935AF00A6B4D0 /* UIView+InstanceNib.swift */,
+				1A27FB3F224D2189009DE7A9 /* TimeInterval+text.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -530,6 +533,7 @@
 				1ADDC346224935AF00A6B4D0 /* NetworkManager.swift in Sources */,
 				1A27FB38224BD6AF009DE7A9 /* Ingredient.swift in Sources */,
 				1A8C26C52249513B00253A43 /* FavoritesViewController.swift in Sources */,
+				1A27FB40224D2189009DE7A9 /* TimeInterval+text.swift in Sources */,
 				1A8C26C32249512300253A43 /* ListRecipesViewController.swift in Sources */,
 				1A27FB35224BCEAD009DE7A9 /* ListRecipeTableViewCell.swift in Sources */,
 				1ADDC348224935AF00A6B4D0 /* UIView+InstanceNib.swift in Sources */,

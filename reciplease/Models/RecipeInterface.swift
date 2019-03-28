@@ -12,4 +12,6 @@ protocol RecipeInterface {
      var title: String? { get }
      var subtitle: String? { get }
      var imageUrl: String? { get }
+     var rate: String? { get }
+     var time: String? { get }
 }

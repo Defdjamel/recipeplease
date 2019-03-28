@@ -14,6 +14,7 @@ class SearchViewController: UIViewController {
     @IBOutlet weak var searchTextField: UITextField! // ingredient user input
     @IBOutlet weak var tableView: UITableView! //ingredients TableView
     
+    // MARK: - Init
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +22,7 @@ class SearchViewController: UIViewController {
     }
    
     
-    // MARK: - Action UI
+    // MARK: - Action
     @IBAction func onClickAdd(_ sender: Any) {
         if let text = searchTextField.text, !text.isEmpty {
             ingredients.append(text)

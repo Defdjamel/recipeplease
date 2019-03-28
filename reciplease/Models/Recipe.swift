@@ -23,6 +23,14 @@ class Recipe: NSManagedObject {
                recipe = recipeDuplicate
             }
         }
+//       Rating
+        if let rating = dict.object(forKey: "rating") as? Int {
+            recipe.rating = NSNumber.init(value: rating)
+        }
+//        Time
+        if let totalTimeInSeconds = dict.object(forKey: "totalTimeInSeconds") as? Int {
+            recipe.totalTimeInSeconds = NSDecimalNumber.init(value: totalTimeInSeconds)
+        }
        
         
         if let name = dict.object(forKey: "recipeName") as? String {
@@ -83,5 +91,22 @@ extension Recipe : RecipeInterface {
         }
         return nil
     }
+    
+    var rate: String? {
+        if let rating = rating {
+            return rating.stringValue
+        }
+        return "-"
+    }
+    
+    var time: String? {
+        if let time = totalTimeInSeconds {
+            //Convert to Minute
+            return time.doubleValue.getMinutesHoursFromSeconds()
+        }
+        return "-"
+    }
+    
+    
     
 }

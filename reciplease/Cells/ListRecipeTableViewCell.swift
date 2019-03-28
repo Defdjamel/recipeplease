@@ -14,6 +14,7 @@ class ListRecipeTableViewCell: UITableViewCell {
     @IBOutlet weak var recipeImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var subtitleLabel: UILabel!
+    @IBOutlet weak var rateView: RecipeRateView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -37,6 +38,8 @@ class ListRecipeTableViewCell: UITableViewCell {
         else{
             self.recipeImage.image = nil
         }
+        //rateView
+        self.rateView.setRecipe(recipe)
         
     }
     

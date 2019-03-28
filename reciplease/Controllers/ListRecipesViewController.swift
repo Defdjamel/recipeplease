@@ -16,29 +16,34 @@ class ListRecipesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activtyIndicator: UIActivityIndicatorView!
-    
+   
+   
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        self.tableView.register(UINib.init(nibName: cellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: cellIdentifier)//register Cell
+        setup()
         searchRecipes()//init first call with ingredients parameters
-    
     }
     
+    // MARK: - Setup
+    func setup(){
+        self.tableView.register(UINib.init(nibName: cellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: cellIdentifier)//register Cell
+    }
+    
+    // MARK: - Data
     private func searchRecipes(){
        showActivity()
         NetworkManager.sharedInstance.searchRecipes(ingredients,startPage: currentPage, success: { (recipes) in
             self.recipes = recipes
             self.tableView.reloadData()
             self.hideActivity()
-         
-            
         }) {//failed!
            self.hideActivity()
         }
     }
     
+     // MARK: - ViewLifeCycle
     private func showActivity(){
         activtyIndicator.startAnimating()
         activtyIndicator.isHidden = false

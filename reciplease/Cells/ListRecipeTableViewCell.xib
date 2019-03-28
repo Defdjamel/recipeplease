@@ -12,19 +12,19 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="158" id="KGk-i7-Jjw" customClass="ListRecipeTableViewCell" customModule="reciplease" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="344" height="158"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="180" id="KGk-i7-Jjw" customClass="ListRecipeTableViewCell" customModule="reciplease" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="344" height="180"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="344" height="157.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="344" height="179.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="k95-vC-1JS">
-                        <rect key="frame" x="0.0" y="0.0" width="344" height="157.5"/>
+                        <rect key="frame" x="0.0" y="0.0" width="344" height="179.5"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pID-cT-Nfh">
-                        <rect key="frame" x="0.0" y="94.5" width="344" height="63"/>
+                        <rect key="frame" x="0.0" y="116.5" width="344" height="63"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomatoes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3A9-Jb-QKZ">
                                 <rect key="frame" x="8" y="8" width="328" height="26"/>
@@ -50,34 +50,34 @@
                             <constraint firstAttribute="trailing" secondItem="K9V-tn-FSP" secondAttribute="trailing" constant="8" id="vrj-Zl-Ejp"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-BZ-rVg" customClass="RecipeRateView" customModule="reciplease" customModuleProvider="target">
-                        <rect key="frame" x="291" y="8" width="45" height="45"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-BZ-rVg" customClass="RecipeRateView" customModule="reciplease" customModuleProvider="target">
+                        <rect key="frame" x="276" y="8" width="60" height="55"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="45" id="7Sh-6k-kk4"/>
-                            <constraint firstAttribute="width" constant="45" id="Ief-D2-kaf"/>
+                            <constraint firstAttribute="height" constant="55" id="7Sh-6k-kk4"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="pID-cT-Nfh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="7XY-PX-dDM"/>
+                    <constraint firstAttribute="trailing" secondItem="Qir-BZ-rVg" secondAttribute="trailing" constant="8" id="Oxz-Yf-VpI"/>
                     <constraint firstItem="k95-vC-1JS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QQx-qQ-7Po"/>
                     <constraint firstAttribute="trailing" secondItem="k95-vC-1JS" secondAttribute="trailing" id="T34-oT-Auy"/>
                     <constraint firstAttribute="bottom" secondItem="k95-vC-1JS" secondAttribute="bottom" id="Wag-KY-HQk"/>
                     <constraint firstItem="k95-vC-1JS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aMm-rp-YoN"/>
                     <constraint firstAttribute="bottom" secondItem="pID-cT-Nfh" secondAttribute="bottom" id="dJx-Jr-waA"/>
                     <constraint firstAttribute="trailing" secondItem="pID-cT-Nfh" secondAttribute="trailing" id="gAU-AQ-uMX"/>
-                    <constraint firstAttribute="trailing" secondItem="Qir-BZ-rVg" secondAttribute="trailing" constant="8" id="i1q-jt-byP"/>
                     <constraint firstItem="Qir-BZ-rVg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="uQ6-v5-bXT"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="rateView" destination="Qir-BZ-rVg" id="V2y-h4-V7S"/>
                 <outlet property="recipeImage" destination="k95-vC-1JS" id="MKf-qQ-2cZ"/>
                 <outlet property="subtitleLabel" destination="K9V-tn-FSP" id="Vla-az-q0x"/>
                 <outlet property="titleLabel" destination="3A9-Jb-QKZ" id="que-lQ-MSp"/>
             </connections>
-            <point key="canvasLocation" x="156.80000000000001" y="205.09745127436284"/>
+            <point key="canvasLocation" x="156.80000000000001" y="195.20239880059972"/>
         </tableViewCell>
     </objects>
 </document>

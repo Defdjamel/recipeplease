@@ -17,8 +17,8 @@
     <entity name="Recipe" representedClassName=".Recipe" syncable="YES" codeGenerationType="category">
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="rating" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
-        <attribute name="totalTimeInSeconds" optional="YES" attributeType="Decimal" defaultValueString="0.0" syncable="YES"/>
+        <attribute name="rating" attributeType="Double" usesScalarValueType="NO" syncable="YES"/>
+        <attribute name="totalTimeInSeconds" optional="YES" attributeType="Decimal" syncable="YES"/>
         <relationship name="favorite" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Favorite" inverseName="recipe" inverseEntity="Favorite" syncable="YES"/>
         <relationship name="imageUrls" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImageUrl" inverseName="recipe" inverseEntity="ImageUrl" syncable="YES"/>
         <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="recipes" inverseEntity="Ingredient" syncable="YES"/>
