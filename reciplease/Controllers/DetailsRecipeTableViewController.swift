@@ -9,6 +9,7 @@
 import UIKit
 
 class DetailsRecipeTableViewController: UIViewController {
+    var curentRecipe : Recipe!
      // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

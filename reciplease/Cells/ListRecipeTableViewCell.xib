@@ -50,7 +50,7 @@
                             <constraint firstAttribute="trailing" secondItem="K9V-tn-FSP" secondAttribute="trailing" constant="8" id="vrj-Zl-Ejp"/>
                         </constraints>
                     </view>
-                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-BZ-rVg" customClass="RecipeRateView" customModule="reciplease" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-BZ-rVg" customClass="RecipeRateView" customModule="reciplease" customModuleProvider="target">
                         <rect key="frame" x="276" y="8" width="60" height="55"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -67,6 +67,7 @@
                     <constraint firstItem="k95-vC-1JS" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aMm-rp-YoN"/>
                     <constraint firstAttribute="bottom" secondItem="pID-cT-Nfh" secondAttribute="bottom" id="dJx-Jr-waA"/>
                     <constraint firstAttribute="trailing" secondItem="pID-cT-Nfh" secondAttribute="trailing" id="gAU-AQ-uMX"/>
+                    <constraint firstItem="Qir-BZ-rVg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="276" placeholder="YES" id="myf-HR-Auy"/>
                     <constraint firstItem="Qir-BZ-rVg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="uQ6-v5-bXT"/>
                 </constraints>
             </tableViewCellContentView>

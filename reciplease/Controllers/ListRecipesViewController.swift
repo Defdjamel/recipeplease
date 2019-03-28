@@ -53,19 +53,27 @@ class ListRecipesViewController: UIViewController {
         activtyIndicator.isHidden = true
     }
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let destination =  segue.destination as? DetailsRecipeTableViewController, let row = tableView.indexPathForSelectedRow?.row {
+            let recipeSelected = recipes[row]
+            destination.curentRecipe = recipeSelected
+            print("recipe Selected : \(recipeSelected.name!)")
+        }
     }
-    */
+    
 
 }
 // MARK: - UITableViewDelegate
 extension ListRecipesViewController: UITableViewDelegate{
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "List_Details", sender: self)
+    }
     
 }
 // MARK: - UITableViewDataSource
