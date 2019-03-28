@@ -25,4 +25,5 @@ class SearchTableViewCell: UITableViewCell {
      func setIngredient(_ name : String){
         self.titleLabel.text = name
     }
+    
 }

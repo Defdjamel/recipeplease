@@ -1,10 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14460.32" systemVersion="18D109" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Favorite" representedClassName=".Favorite" syncable="YES" codeGenerationType="category">
-        <attribute name="comments" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="created_at" optional="YES" attributeType="Date" usesScalarValueType="NO" syncable="YES"/>
-        <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="favorite" inverseEntity="Recipe" syncable="YES"/>
-    </entity>
     <entity name="ImageUrl" representedClassName=".ImageUrl" syncable="YES" codeGenerationType="category">
         <attribute name="url" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="imageUrls" inverseEntity="Recipe" syncable="YES"/>
@@ -15,16 +10,15 @@
         <relationship name="recipes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Recipe" inverseName="ingredients" inverseEntity="Recipe" syncable="YES"/>
     </entity>
     <entity name="Recipe" representedClassName=".Recipe" syncable="YES" codeGenerationType="category">
+        <attribute name="favorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" attributeType="Double" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="totalTimeInSeconds" optional="YES" attributeType="Decimal" syncable="YES"/>
-        <relationship name="favorite" optional="YES" maxCount="1" deletionRule="Cascade" destinationEntity="Favorite" inverseName="recipe" inverseEntity="Favorite" syncable="YES"/>
         <relationship name="imageUrls" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImageUrl" inverseName="recipe" inverseEntity="ImageUrl" syncable="YES"/>
         <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="recipes" inverseEntity="Ingredient" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Favorite" positionX="-63" positionY="0" width="128" height="88"/>
         <element name="Recipe" positionX="212.74609375" positionY="36.4921875" width="128" height="148"/>
         <element name="Ingredient" positionX="456.48046875" positionY="208.77734375" width="128" height="88"/>
         <element name="ImageUrl" positionX="203.96875" positionY="297.921875" width="128" height="73"/>

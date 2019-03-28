@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		1A27FB17224A7789009DE7A9 /* Favorite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB16224A7789009DE7A9 /* Favorite.swift */; };
 		1A27FB19224A7EC0009DE7A9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB18224A7EC0009DE7A9 /* SearchViewController.swift */; };
 		1A27FB1B224A8A40009DE7A9 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB1A224A8A40009DE7A9 /* SearchTableViewCell.swift */; };
 		1A27FB1D224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB1C224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift */; };
@@ -28,6 +27,8 @@
 		1A27FB56224D2C68009DE7A9 /* HeaderDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB55224D2C68009DE7A9 /* HeaderDetailsTableViewCell.swift */; };
 		1A27FB59224D3A2F009DE7A9 /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB57224D3A2F009DE7A9 /* IngredientsTableViewCell.swift */; };
 		1A27FB5A224D3A2F009DE7A9 /* IngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A27FB58224D3A2F009DE7A9 /* IngredientsTableViewCell.xib */; };
+		1A27FB5C224D64CE009DE7A9 /* DetailsHeaderSectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB5B224D64CE009DE7A9 /* DetailsHeaderSectionView.swift */; };
+		1A27FB5E224D64DC009DE7A9 /* DetailsHeaderSectionView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A27FB5D224D64DC009DE7A9 /* DetailsHeaderSectionView.xib */; };
 		1A8C26C32249512300253A43 /* ListRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C26C22249512300253A43 /* ListRecipesViewController.swift */; };
 		1A8C26C52249513B00253A43 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C26C42249513B00253A43 /* FavoritesViewController.swift */; };
 		1AB7FAEB224977DD00840DA8 /* recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7FAE9224977DD00840DA8 /* recipes.xcdatamodeld */; };
@@ -67,7 +68,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		1A27FB16224A7789009DE7A9 /* Favorite.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Favorite.swift; sourceTree = "<group>"; };
 		1A27FB18224A7EC0009DE7A9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1A27FB1A224A8A40009DE7A9 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		1A27FB1C224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRecipeTableViewController.swift; sourceTree = "<group>"; };
@@ -88,6 +88,8 @@
 		1A27FB55224D2C68009DE7A9 /* HeaderDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailsTableViewCell.swift; sourceTree = "<group>"; };
 		1A27FB57224D3A2F009DE7A9 /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
 		1A27FB58224D3A2F009DE7A9 /* IngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsTableViewCell.xib; sourceTree = "<group>"; };
+		1A27FB5B224D64CE009DE7A9 /* DetailsHeaderSectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsHeaderSectionView.swift; sourceTree = "<group>"; };
+		1A27FB5D224D64DC009DE7A9 /* DetailsHeaderSectionView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailsHeaderSectionView.xib; sourceTree = "<group>"; };
 		1A8C26C22249512300253A43 /* ListRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRecipesViewController.swift; sourceTree = "<group>"; };
 		1A8C26C42249513B00253A43 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		1AB7FAEA224977DD00840DA8 /* recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = recipes.xcdatamodel; sourceTree = "<group>"; };
@@ -296,6 +298,8 @@
 			children = (
 				1A27FB3B224C0F18009DE7A9 /* RecipeRateView.swift */,
 				1A27FB3D224C0F1E009DE7A9 /* RecipeRateView.xib */,
+				1A27FB5B224D64CE009DE7A9 /* DetailsHeaderSectionView.swift */,
+				1A27FB5D224D64DC009DE7A9 /* DetailsHeaderSectionView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -305,7 +309,6 @@
 			children = (
 				1AB7FAEE2249791500840DA8 /* Recipe.swift */,
 				1A27FB37224BD6AF009DE7A9 /* Ingredient.swift */,
-				1A27FB16224A7789009DE7A9 /* Favorite.swift */,
 				1A27FB39224BD7F0009DE7A9 /* ImageUrl.swift */,
 				1A27FB2F224BC170009DE7A9 /* RecipeInterface.swift */,
 			);
@@ -479,6 +482,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A27FB5E224D64DC009DE7A9 /* DetailsHeaderSectionView.xib in Resources */,
 				1A27FB51224D22B5009DE7A9 /* Manga Hollow Italic.otf in Resources */,
 				1A27FB4D224D22B5009DE7A9 /* Manga Hollow.otf in Resources */,
 				1A27FB3E224C0F1E009DE7A9 /* RecipeRateView.xib in Resources */,
@@ -616,11 +620,11 @@
 				1A27FB38224BD6AF009DE7A9 /* Ingredient.swift in Sources */,
 				1A27FB56224D2C68009DE7A9 /* HeaderDetailsTableViewCell.swift in Sources */,
 				1A8C26C52249513B00253A43 /* FavoritesViewController.swift in Sources */,
+				1A27FB5C224D64CE009DE7A9 /* DetailsHeaderSectionView.swift in Sources */,
 				1A27FB40224D2189009DE7A9 /* TimeInterval+text.swift in Sources */,
 				1A8C26C32249512300253A43 /* ListRecipesViewController.swift in Sources */,
 				1A27FB35224BCEAD009DE7A9 /* ListRecipeTableViewCell.swift in Sources */,
 				1ADDC348224935AF00A6B4D0 /* UIView+InstanceNib.swift in Sources */,
-				1A27FB17224A7789009DE7A9 /* Favorite.swift in Sources */,
 				1ADDC30A22483CD700A6B4D0 /* AppDelegate.swift in Sources */,
 				1AB7FAEF2249791500840DA8 /* Recipe.swift in Sources */,
 				1A27FB1B224A8A40009DE7A9 /* SearchTableViewCell.swift in Sources */,

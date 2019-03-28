@@ -12,8 +12,8 @@ extension UIView{
     /**
      Returns instance from Nib
      */
-    class func instanceFromNib() -> Any {
-        return UINib(nibName: self.className, bundle: Bundle.main).instantiate(withOwner: nil, options: nil)[0] as Any
+    class func instanceFromNib() -> Any? {
+        return UINib(nibName: self.className, bundle: Bundle.main).instantiate(withOwner: nil, options: nil)[0]
     }
 }
 

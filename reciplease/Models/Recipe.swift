@@ -43,8 +43,7 @@ class Recipe: NSManagedObject {
         if let ingredients = dict.object(forKey: "ingredients") as? [String] {
             Ingredient.saveIngredients(ingredients, recipe)
         }
-        
-        
+    
         //add images
         if let imageUrls = dict.object(forKey: "smallImageUrls") as? [String] {
             ImageUrl.saveImageurls(imageUrls, recipe)
@@ -54,11 +53,18 @@ class Recipe: NSManagedObject {
         
     }
     
+    func setFavorite(){
+        self.favorite = !self.favorite
+        try? AppDelegate.viewContext.save()
+    }
+    
     static var all: [Recipe] {
         let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         guard let recipes = try? AppDelegate.viewContext.fetch(request) else { return [] }
         return recipes
     }
+    
+    
 }
 
 extension Recipe : RecipeInterface {
@@ -107,6 +113,8 @@ extension Recipe : RecipeInterface {
         return "-"
     }
     
-    
+    var isFavorite: Bool {
+            return favorite
+    }
     
 }

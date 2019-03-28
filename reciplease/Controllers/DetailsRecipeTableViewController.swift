@@ -11,21 +11,45 @@ private let headerCellIdentier = "HeaderCellIdentier"
 private let ingredientCellIdentier = "IngredientsTableViewCell"
 class DetailsRecipeTableViewController: UIViewController {
     var curentRecipe : Recipe!
+    var buttonFavorite : UIButton!
     
      @IBOutlet weak var tableView: UITableView!
      // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setup()
+        addFavoriteBtn()
+        updateBtnFavorite()
     }
-    
+    func updateBtnFavorite(){
+        buttonFavorite.isSelected = self.curentRecipe.isFavorite
+    }
     // MARK: - Setup
     func setup(){
         //register Cell Nib
         self.tableView.register(UINib.init(nibName: ingredientCellIdentier, bundle: Bundle.main), forCellReuseIdentifier: ingredientCellIdentier)
+        
     }
-
+    
+    func addFavoriteBtn(){
+         buttonFavorite = UIButton.init(type: .custom)
+        buttonFavorite.setImage(UIImage.init(named: "top_off"), for: .normal)
+        buttonFavorite.setImage(UIImage.init(named: "top_on"), for: .selected)
+        buttonFavorite.setImage(UIImage.init(named: "top_on"), for: .highlighted)
+        buttonFavorite.addTarget(self, action: #selector(onClickFavorite), for:.touchUpInside)
+        buttonFavorite.frame = CGRect.init(x: 0, y: 0, width: 30, height: 30) //CGRectMake(0, 0, 30, 30)
+        let barButton = UIBarButtonItem.init(customView: buttonFavorite)
+        self.navigationItem.rightBarButtonItem = barButton
+    }
+    
     // MARK: - Data
+    
+     // MARK: - Action
+    @objc func onClickFavorite(){
+        self.curentRecipe.setFavorite()
+        updateBtnFavorite()
+    
+    }
     
     
 }
@@ -64,21 +88,31 @@ extension DetailsRecipeTableViewController: UITableViewDataSource{
         else{
                 let cell = tableView.dequeueReusableCell(withIdentifier: ingredientCellIdentier,
                                                          for: indexPath) as! IngredientsTableViewCell
-                return cell
+            if  let ingredient = curentRecipe.ingredients?.allObjects[indexPath.row] as? Ingredient, let name = ingredient.name  {
+                cell.setIngredient(name)
+            }
+            return cell
             
         }
-        
-        
-     
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         switch indexPath.section {
         case 0://Header size Cell
-           return 180
+           return 280
         case 1://Ingredient size Cell
-            return 60
+            return 40
         default:
            return  0
         }
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        if section == 1 {
+            return DetailsHeaderSectionView.instanceFromNib() as? UIView
+        }
+        return nil
+    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return  (section == 1 ) ? 60 : 0
     }
 }

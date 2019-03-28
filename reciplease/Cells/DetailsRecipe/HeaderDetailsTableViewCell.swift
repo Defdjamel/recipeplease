@@ -9,6 +9,10 @@
 import UIKit
 
 class HeaderDetailsTableViewCell: UITableViewCell {
+    
+    @IBOutlet weak var recipeImage: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var rateView: RecipeRateView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -22,6 +26,16 @@ class HeaderDetailsTableViewCell: UITableViewCell {
     }
     // MARK:  - DATA
      func setRecipe(_ recipe : RecipeInterface) {
+        self.rateView.setRecipe(recipe)
+        self.titleLabel.text = recipe.title
+        if let imageUrl = recipe.imageUrl {
+            let url = URL(string: imageUrl)
+            self.recipeImage.kf.setImage(with: url)
+        }
+        else{
+            self.recipeImage.image = nil
+        }
+        
     }
 
 }
