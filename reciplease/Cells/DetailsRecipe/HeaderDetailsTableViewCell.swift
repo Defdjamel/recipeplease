@@ -1,16 +1,15 @@
 //
-//  SearchTableViewCell.swift
+//  HeaderDetailsTableViewCell.swift
 //  reciplease
 //
-//  Created by james on 26/03/2019.
+//  Created by james on 28/03/2019.
 //  Copyright © 2019 intergoldex. All rights reserved.
 //
 
 import UIKit
 
-class SearchTableViewCell: UITableViewCell {
+class HeaderDetailsTableViewCell: UITableViewCell {
 
-    @IBOutlet weak var titleLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,8 +20,8 @@ class SearchTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-
-     func setIngredient(_ name : String){
-        self.titleLabel.text = name
+    // MARK:  - DATA
+     func setRecipe(_ recipe : RecipeInterface) {
     }
+
 }

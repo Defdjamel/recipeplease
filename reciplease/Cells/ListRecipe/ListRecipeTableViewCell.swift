@@ -27,7 +27,7 @@ class ListRecipeTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+     // MARK:  - DATA
     func setRecipe(_ recipe : RecipeInterface) {
         self.titleLabel.text = recipe.title
         self.subtitleLabel.text = recipe.subtitle

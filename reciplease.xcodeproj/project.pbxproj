@@ -22,10 +22,12 @@
 		1A27FB4B224D22B5009DE7A9 /* Manga.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A27FB44224D22B5009DE7A9 /* Manga.otf */; };
 		1A27FB4C224D22B5009DE7A9 /* Manga Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A27FB45224D22B5009DE7A9 /* Manga Bold.otf */; };
 		1A27FB4D224D22B5009DE7A9 /* Manga Hollow.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A27FB46224D22B5009DE7A9 /* Manga Hollow.otf */; };
-		1A27FB4E224D22B5009DE7A9 /* Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 1A27FB47224D22B5009DE7A9 /* Font License.txt */; };
 		1A27FB4F224D22B5009DE7A9 /* Manga Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A27FB48224D22B5009DE7A9 /* Manga Italic.otf */; };
 		1A27FB50224D22B5009DE7A9 /* Manga Bold Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A27FB49224D22B5009DE7A9 /* Manga Bold Italic.otf */; };
 		1A27FB51224D22B5009DE7A9 /* Manga Hollow Italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 1A27FB4A224D22B5009DE7A9 /* Manga Hollow Italic.otf */; };
+		1A27FB56224D2C68009DE7A9 /* HeaderDetailsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB55224D2C68009DE7A9 /* HeaderDetailsTableViewCell.swift */; };
+		1A27FB59224D3A2F009DE7A9 /* IngredientsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB57224D3A2F009DE7A9 /* IngredientsTableViewCell.swift */; };
+		1A27FB5A224D3A2F009DE7A9 /* IngredientsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A27FB58224D3A2F009DE7A9 /* IngredientsTableViewCell.xib */; };
 		1A8C26C32249512300253A43 /* ListRecipesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C26C22249512300253A43 /* ListRecipesViewController.swift */; };
 		1A8C26C52249513B00253A43 /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8C26C42249513B00253A43 /* FavoritesViewController.swift */; };
 		1AB7FAEB224977DD00840DA8 /* recipes.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7FAE9224977DD00840DA8 /* recipes.xcdatamodeld */; };
@@ -80,10 +82,12 @@
 		1A27FB44224D22B5009DE7A9 /* Manga.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Manga.otf; sourceTree = "<group>"; };
 		1A27FB45224D22B5009DE7A9 /* Manga Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manga Bold.otf"; sourceTree = "<group>"; };
 		1A27FB46224D22B5009DE7A9 /* Manga Hollow.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manga Hollow.otf"; sourceTree = "<group>"; };
-		1A27FB47224D22B5009DE7A9 /* Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Font License.txt"; sourceTree = "<group>"; };
 		1A27FB48224D22B5009DE7A9 /* Manga Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manga Italic.otf"; sourceTree = "<group>"; };
 		1A27FB49224D22B5009DE7A9 /* Manga Bold Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manga Bold Italic.otf"; sourceTree = "<group>"; };
 		1A27FB4A224D22B5009DE7A9 /* Manga Hollow Italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Manga Hollow Italic.otf"; sourceTree = "<group>"; };
+		1A27FB55224D2C68009DE7A9 /* HeaderDetailsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailsTableViewCell.swift; sourceTree = "<group>"; };
+		1A27FB57224D3A2F009DE7A9 /* IngredientsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCell.swift; sourceTree = "<group>"; };
+		1A27FB58224D3A2F009DE7A9 /* IngredientsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = IngredientsTableViewCell.xib; sourceTree = "<group>"; };
 		1A8C26C22249512300253A43 /* ListRecipesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRecipesViewController.swift; sourceTree = "<group>"; };
 		1A8C26C42249513B00253A43 /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		1AB7FAEA224977DD00840DA8 /* recipes.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = recipes.xcdatamodel; sourceTree = "<group>"; };
@@ -165,12 +169,36 @@
 				1A27FB44224D22B5009DE7A9 /* Manga.otf */,
 				1A27FB45224D22B5009DE7A9 /* Manga Bold.otf */,
 				1A27FB46224D22B5009DE7A9 /* Manga Hollow.otf */,
-				1A27FB47224D22B5009DE7A9 /* Font License.txt */,
 				1A27FB48224D22B5009DE7A9 /* Manga Italic.otf */,
 				1A27FB49224D22B5009DE7A9 /* Manga Bold Italic.otf */,
 				1A27FB4A224D22B5009DE7A9 /* Manga Hollow Italic.otf */,
 			);
 			path = manga;
+			sourceTree = "<group>";
+		};
+		1A27FB52224D2C29009DE7A9 /* DetailsRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				1A27FB55224D2C68009DE7A9 /* HeaderDetailsTableViewCell.swift */,
+			);
+			path = DetailsRecipe;
+			sourceTree = "<group>";
+		};
+		1A27FB53224D2C32009DE7A9 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				1A27FB1A224A8A40009DE7A9 /* SearchTableViewCell.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		1A27FB54224D2C3B009DE7A9 /* ListRecipe */ = {
+			isa = PBXGroup;
+			children = (
+				1A27FB33224BCEAD009DE7A9 /* ListRecipeTableViewCell.swift */,
+				1A27FB34224BCEAD009DE7A9 /* ListRecipeTableViewCell.xib */,
+			);
+			path = ListRecipe;
 			sourceTree = "<group>";
 		};
 		1ADDC2FD22483CD700A6B4D0 = {
@@ -254,9 +282,11 @@
 		1ADDC33C224935AE00A6B4D0 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				1A27FB1A224A8A40009DE7A9 /* SearchTableViewCell.swift */,
-				1A27FB33224BCEAD009DE7A9 /* ListRecipeTableViewCell.swift */,
-				1A27FB34224BCEAD009DE7A9 /* ListRecipeTableViewCell.xib */,
+				1A27FB54224D2C3B009DE7A9 /* ListRecipe */,
+				1A27FB53224D2C32009DE7A9 /* Search */,
+				1A27FB52224D2C29009DE7A9 /* DetailsRecipe */,
+				1A27FB57224D3A2F009DE7A9 /* IngredientsTableViewCell.swift */,
+				1A27FB58224D3A2F009DE7A9 /* IngredientsTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -449,7 +479,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A27FB4E224D22B5009DE7A9 /* Font License.txt in Resources */,
 				1A27FB51224D22B5009DE7A9 /* Manga Hollow Italic.otf in Resources */,
 				1A27FB4D224D22B5009DE7A9 /* Manga Hollow.otf in Resources */,
 				1A27FB3E224C0F1E009DE7A9 /* RecipeRateView.xib in Resources */,
@@ -458,6 +487,7 @@
 				1ADDC31122483CD700A6B4D0 /* Main.storyboard in Resources */,
 				1A27FB50224D22B5009DE7A9 /* Manga Bold Italic.otf in Resources */,
 				1A27FB4B224D22B5009DE7A9 /* Manga.otf in Resources */,
+				1A27FB5A224D3A2F009DE7A9 /* IngredientsTableViewCell.xib in Resources */,
 				1A27FB36224BCEAD009DE7A9 /* ListRecipeTableViewCell.xib in Resources */,
 				1A27FB4C224D22B5009DE7A9 /* Manga Bold.otf in Resources */,
 				1A27FB4F224D22B5009DE7A9 /* Manga Italic.otf in Resources */,
@@ -584,6 +614,7 @@
 				1A27FB3A224BD7F0009DE7A9 /* ImageUrl.swift in Sources */,
 				1ADDC346224935AF00A6B4D0 /* NetworkManager.swift in Sources */,
 				1A27FB38224BD6AF009DE7A9 /* Ingredient.swift in Sources */,
+				1A27FB56224D2C68009DE7A9 /* HeaderDetailsTableViewCell.swift in Sources */,
 				1A8C26C52249513B00253A43 /* FavoritesViewController.swift in Sources */,
 				1A27FB40224D2189009DE7A9 /* TimeInterval+text.swift in Sources */,
 				1A8C26C32249512300253A43 /* ListRecipesViewController.swift in Sources */,
@@ -595,6 +626,7 @@
 				1A27FB1B224A8A40009DE7A9 /* SearchTableViewCell.swift in Sources */,
 				1A27FB3C224C0F18009DE7A9 /* RecipeRateView.swift in Sources */,
 				1A27FB1D224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift in Sources */,
+				1A27FB59224D3A2F009DE7A9 /* IngredientsTableViewCell.swift in Sources */,
 				1ADDC349224935AF00A6B4D0 /* Network.swift in Sources */,
 				1AB7FAEB224977DD00840DA8 /* recipes.xcdatamodeld in Sources */,
 			);
