@@ -21,7 +21,7 @@ extension NetworkManager {
     func searchRecipes (_ ingredients : Array<String>, startPage : Int, success: @escaping (Array<Recipe>) -> Void, failed: @escaping () -> Void){
         var service = self.apiUrl(Api.search_recipes)
         
-        //add start page
+        //add start page for pagination
         service +=   "&start=\(startPage)"
         
         //add ingredients
@@ -52,6 +52,29 @@ extension NetworkManager {
             }
             
         }
+    }
+    
+    func detailsRecipe (_ recipe : Recipe,  success: @escaping (Recipe) -> Void, failed: @escaping () -> Void){
+        //create service Url
+        var service =  "\(Api.details_recipe)/\(recipe.id ?? "")"
+        service = self.apiUrl(service)
+      
+         print(service)
+        Alamofire.request( service, method: .get ,parameters: nil ,encoding: URLEncoding.default).responseJSON { response in
+            
+            //we expect to receive a dictionnary containing details of recipe
+            if  let recipeDict = response.result.value  as? NSDictionary {
+                //update recipe to
+                let recipe =   Recipe.saveRecipe(recipeDict)
+                success(recipe)
+            }
+            else{
+                print("request failed")
+                failed()
+            }
+            
+        }
+        
     }
    
 }

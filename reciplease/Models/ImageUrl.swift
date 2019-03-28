@@ -12,7 +12,11 @@ class ImageUrl: NSManagedObject {
     static func saveImageurls(_ items: [String], _ recipe : Recipe ) {
         for item in items {
             //check Duplicate
-            if let list = recipe.imageUrls , list.contains(item) {
+            let context = AppDelegate.viewContext
+            let request: NSFetchRequest<ImageUrl> = ImageUrl.fetchRequest()
+            request.predicate = NSPredicate(format: "url == %@ " , item)
+            if let ImageUrls = try? context.fetch(request), ImageUrls.count > 0 {
+           
             }else{
                 let imageUrl = ImageUrl(context: AppDelegate.viewContext)
                 imageUrl.url = item

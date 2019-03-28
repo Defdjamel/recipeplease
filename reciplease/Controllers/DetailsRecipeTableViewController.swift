@@ -20,6 +20,7 @@ class DetailsRecipeTableViewController: UIViewController {
         setup()
         addFavoriteBtn()
         updateBtnFavorite()
+        getDetailsRecipe()
     }
     func updateBtnFavorite(){
         buttonFavorite.isSelected = self.curentRecipe.isFavorite
@@ -28,7 +29,6 @@ class DetailsRecipeTableViewController: UIViewController {
     func setup(){
         //register Cell Nib
         self.tableView.register(UINib.init(nibName: ingredientCellIdentier, bundle: Bundle.main), forCellReuseIdentifier: ingredientCellIdentier)
-        
     }
     
     func addFavoriteBtn(){
@@ -43,6 +43,15 @@ class DetailsRecipeTableViewController: UIViewController {
     }
     
     // MARK: - Data
+    func getDetailsRecipe(){
+        NetworkManager.sharedInstance.detailsRecipe(curentRecipe, success: { (recipe) in
+            
+            self.curentRecipe = recipe
+            self.tableView.reloadData()
+        }) {
+            
+        }
+    }
     
      // MARK: - Action
     @objc func onClickFavorite(){
@@ -50,8 +59,6 @@ class DetailsRecipeTableViewController: UIViewController {
         updateBtnFavorite()
     
     }
-    
-    
 }
 
 
@@ -66,7 +73,7 @@ extension DetailsRecipeTableViewController: UITableViewDataSource{
         case 0:
             return 1
         case 1:
-            if let ingredients = curentRecipe.ingredients {
+            if let ingredients = curentRecipe.ingredientLines {
                 return ingredients.count
             }
             return 0
@@ -88,23 +95,14 @@ extension DetailsRecipeTableViewController: UITableViewDataSource{
         else{
                 let cell = tableView.dequeueReusableCell(withIdentifier: ingredientCellIdentier,
                                                          for: indexPath) as! IngredientsTableViewCell
-            if  let ingredient = curentRecipe.ingredients?.allObjects[indexPath.row] as? Ingredient, let name = ingredient.name  {
+            if  let ingredient = curentRecipe.ingredientLines?.allObjects[indexPath.row] as? IngredientLine, let name = ingredient.name  {
                 cell.setIngredient(name)
             }
             return cell
             
         }
     }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        switch indexPath.section {
-        case 0://Header size Cell
-           return 280
-        case 1://Ingredient size Cell
-            return 40
-        default:
-           return  0
-        }
-    }
+  
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 1 {

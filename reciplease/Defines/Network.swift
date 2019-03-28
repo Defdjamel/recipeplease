@@ -17,4 +17,5 @@ let sizeImage = "400"
 
 struct Api {
     static let search_recipes = serviceApi + "recipes"
+    static let details_recipe = serviceApi + "recipe"
 }

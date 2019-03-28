@@ -10,19 +10,29 @@ import UIKit
 import CoreData
 
 class Recipe: NSManagedObject {
-    
-    static func saveRecipe(_ dict: NSDictionary) -> Recipe{
-        var recipe = Recipe(context: AppDelegate.viewContext)
-        if let id = dict.object(forKey: "id") as? String {
+    /** this funtion return an existing object if exist else a new.
+     Parameters: id
+     */
+    static func getRecipe(_ id: String) -> Recipe {
+        let context = AppDelegate.viewContext
+        let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
+        request.predicate = NSPredicate(format: "id == %@ " , id)
+        if let recipesDuplicate = try? context.fetch(request), let recipeDuplicate = recipesDuplicate.first  {
+           print(recipesDuplicate.count)
+           return recipeDuplicate
+        }else{
+           let recipe =  Recipe(context: context )
             recipe.id = id
-            //avoid duplicate
-            //check if recipe with same id exist and update it.
-            let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
-            request.predicate = NSPredicate(format: "id == %@", id)
-            if let recipesDuplicate = try? AppDelegate.viewContext.fetch(request), let recipeDuplicate = recipesDuplicate.first {
-               recipe = recipeDuplicate
-            }
+            return recipe
         }
+    }
+    static func saveRecipe(_ dict: NSDictionary) -> Recipe{
+        let context = AppDelegate.viewContext
+       // var recipe = Recipe(context: context )
+        guard let id = dict.object(forKey: "id") as? String else{
+            return Recipe(context: context )
+        }
+        let recipe = self.getRecipe(id)
 //       Rating
         if let rating = dict.object(forKey: "rating") as? Int {
             recipe.rating = NSNumber.init(value: rating)
@@ -31,26 +41,27 @@ class Recipe: NSManagedObject {
         if let totalTimeInSeconds = dict.object(forKey: "totalTimeInSeconds") as? Int {
             recipe.totalTimeInSeconds = NSDecimalNumber.init(value: totalTimeInSeconds)
         }
-       
-        
+//        Name
         if let name = dict.object(forKey: "recipeName") as? String {
             recipe.name = name
         }
-        try? AppDelegate.viewContext.save()
+    
+        try? context.save()
         
         //add ingredient
-        
         if let ingredients = dict.object(forKey: "ingredients") as? [String] {
             Ingredient.saveIngredients(ingredients, recipe)
+        }
+        //add ingredientLine
+        if let ingredientLines = dict.object(forKey: "ingredientLines") as? [String] {
+            IngredientLine.saveIngredientLines(ingredientLines, recipe)
         }
     
         //add images
         if let imageUrls = dict.object(forKey: "smallImageUrls") as? [String] {
             ImageUrl.saveImageurls(imageUrls, recipe)
         }
-        
         return recipe
-        
     }
     
     func setFavorite(){

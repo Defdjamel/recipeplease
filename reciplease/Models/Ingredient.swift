@@ -13,11 +13,14 @@ class Ingredient: NSManagedObject {
     static func saveIngredients(_ items: [String], _ recipe : Recipe ) {
         for item in items {
             //check Duplicate
-            if let list = recipe.ingredients , list.contains(item) {
+            let context = AppDelegate.viewContext
+            let request: NSFetchRequest<Ingredient> = Ingredient.fetchRequest()
+            request.predicate = NSPredicate(format: "name == %@ and recipe.id == %@ " , item, recipe.id!)
+            if let ingredients = try? context.fetch(request), ingredients.count > 0 {
             }else{
                 let ingredient = Ingredient(context: AppDelegate.viewContext)
                 ingredient.name = item
-                ingredient.addToRecipes(recipe)
+                ingredient.recipe = recipe
                 
                 try? AppDelegate.viewContext.save()
             }

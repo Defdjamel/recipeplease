@@ -7,7 +7,11 @@
     <entity name="Ingredient" representedClassName=".Ingredient" syncable="YES" codeGenerationType="category">
         <attribute name="details" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
-        <relationship name="recipes" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Recipe" inverseName="ingredients" inverseEntity="Recipe" syncable="YES"/>
+        <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="ingredients" inverseEntity="Recipe" syncable="YES"/>
+    </entity>
+    <entity name="IngredientLine" representedClassName=".IngredientLine" syncable="YES" codeGenerationType="category">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="recipe" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Recipe" inverseName="ingredientLines" inverseEntity="Recipe" syncable="YES"/>
     </entity>
     <entity name="Recipe" representedClassName=".Recipe" syncable="YES" codeGenerationType="category">
         <attribute name="favorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
@@ -16,11 +20,13 @@
         <attribute name="rating" attributeType="Double" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="totalTimeInSeconds" optional="YES" attributeType="Decimal" syncable="YES"/>
         <relationship name="imageUrls" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ImageUrl" inverseName="recipe" inverseEntity="ImageUrl" syncable="YES"/>
-        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="recipes" inverseEntity="Ingredient" syncable="YES"/>
+        <relationship name="ingredientLines" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="IngredientLine" inverseName="recipe" inverseEntity="IngredientLine" syncable="YES"/>
+        <relationship name="ingredients" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Ingredient" inverseName="recipe" inverseEntity="Ingredient" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Recipe" positionX="212.74609375" positionY="36.4921875" width="128" height="148"/>
-        <element name="Ingredient" positionX="456.48046875" positionY="208.77734375" width="128" height="88"/>
         <element name="ImageUrl" positionX="203.96875" positionY="297.921875" width="128" height="73"/>
+        <element name="Ingredient" positionX="456.48046875" positionY="208.77734375" width="128" height="88"/>
+        <element name="Recipe" positionX="219.0390625" positionY="15.66015625" width="128" height="163"/>
+        <element name="IngredientLine" positionX="428.51171875" positionY="330.2578125" width="128" height="73"/>
     </elements>
 </model>
