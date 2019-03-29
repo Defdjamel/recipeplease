@@ -27,7 +27,7 @@ class ListRecipesViewController: UIViewController {
     }
     
     // MARK: - Setup
-    func setup(){
+    private func setup(){
         self.tableView.register(UINib.init(nibName: cellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: cellIdentifier)//register Cell
     }
     
@@ -38,8 +38,12 @@ class ListRecipesViewController: UIViewController {
             self.recipes = recipes
             self.tableView.reloadData()
             self.hideActivity()
+            if self.recipes.isEmpty {
+                self.showErrorNoRecipe()
+            }
         }) {//failed!
            self.hideActivity()
+           self.showErrorNoRecipe()
         }
     }
     
@@ -51,6 +55,12 @@ class ListRecipesViewController: UIViewController {
     private func hideActivity(){
         activtyIndicator.startAnimating()
         activtyIndicator.isHidden = true
+    }
+    private func showErrorNoRecipe(){
+        self.showErrorMessage("No recipe found!") { (action) in
+             self.navigationController?.popViewController(animated: true)
+        }
+       
     }
 
     

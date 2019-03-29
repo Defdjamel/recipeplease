@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A146B62224E6FD200AF83F4 /* UIViewViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A146B61224E6FD200AF83F4 /* UIViewViewController+Alert.swift */; };
 		1A27FB19224A7EC0009DE7A9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB18224A7EC0009DE7A9 /* SearchViewController.swift */; };
 		1A27FB1B224A8A40009DE7A9 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB1A224A8A40009DE7A9 /* SearchTableViewCell.swift */; };
 		1A27FB1D224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB1C224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift */; };
@@ -69,6 +70,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A146B61224E6FD200AF83F4 /* UIViewViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewViewController+Alert.swift"; sourceTree = "<group>"; };
 		1A27FB18224A7EC0009DE7A9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1A27FB1A224A8A40009DE7A9 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		1A27FB1C224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRecipeTableViewController.swift; sourceTree = "<group>"; };
@@ -324,6 +326,7 @@
 				1ADDC340224935AF00A6B4D0 /* NSObject+Extension.swift */,
 				1ADDC341224935AF00A6B4D0 /* UIView+InstanceNib.swift */,
 				1A27FB3F224D2189009DE7A9 /* TimeInterval+text.swift */,
+				1A146B61224E6FD200AF83F4 /* UIViewViewController+Alert.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -615,6 +618,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A146B62224E6FD200AF83F4 /* UIViewViewController+Alert.swift in Sources */,
 				1ADDC347224935AF00A6B4D0 /* NSObject+Extension.swift in Sources */,
 				1A27FB30224BC170009DE7A9 /* RecipeInterface.swift in Sources */,
 				1A27FB19224A7EC0009DE7A9 /* SearchViewController.swift in Sources */,

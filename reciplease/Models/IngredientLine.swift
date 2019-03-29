@@ -15,18 +15,14 @@ class IngredientLine: NSManagedObject {
             let context = AppDelegate.viewContext
             let request: NSFetchRequest<IngredientLine> = IngredientLine.fetchRequest()
             request.predicate = NSPredicate(format: "name == %@ and recipe.id == %@ " , item, recipe.id!)
-            guard let ingredientLines = try? context.fetch(request), ingredientLines.count > 0 else {//already exist
-                return
+            if let ingredientLines = try? context.fetch(request), ingredientLines.count > 0  {//already exist
             }
-            let ingredientLine = IngredientLine(context: AppDelegate.viewContext)
-            ingredientLine.name = item
-            ingredientLine.recipe = recipe
-            
-            try? AppDelegate.viewContext.save()
-            
-            
+            else {
+                let ingredientLine = IngredientLine(context: AppDelegate.viewContext)
+                ingredientLine.name = item
+                ingredientLine.recipe = recipe
+                try? AppDelegate.viewContext.save()
+            }
         }
-        
     }
-
 }

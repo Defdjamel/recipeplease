@@ -18,7 +18,6 @@ class Recipe: NSManagedObject {
         let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
         request.predicate = NSPredicate(format: "id == %@ " , id)
         if let recipesDuplicate = try? context.fetch(request), let recipeDuplicate = recipesDuplicate.first  {
-           print(recipesDuplicate.count)
            return recipeDuplicate
         }else{
            let recipe =  Recipe(context: context )
@@ -28,7 +27,6 @@ class Recipe: NSManagedObject {
     }
     static func saveRecipe(_ dict: NSDictionary) -> Recipe{
         let context = AppDelegate.viewContext
-       // var recipe = Recipe(context: context )
         guard let id = dict.object(forKey: "id") as? String else{
             return Recipe(context: context )
         }
@@ -44,6 +42,10 @@ class Recipe: NSManagedObject {
 //        Name
         if let name = dict.object(forKey: "recipeName") as? String {
             recipe.name = name
+        }
+//        sourceRecipeUrl
+        if let source = dict.object(forKey: "source") as? NSDictionary, let sourceUrl = source.object(forKey: "sourceRecipeUrl") as? String {
+            recipe.instrucionsUrl = sourceUrl
         }
     
         try? context.save()

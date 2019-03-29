@@ -54,10 +54,23 @@ class DetailsRecipeTableViewController: UIViewController {
     }
     
      // MARK: - Action
+    
+    /**
+     Flag/unFlage Recipe's attributes  IsFavorite 
+     */
     @objc func onClickFavorite(){
         self.curentRecipe.setFavorite()
         updateBtnFavorite()
     
+    }
+    
+    /**
+     Open external webpage for detailed recipe instructions
+     */
+    @IBAction func onClickShowInstructions(_ sender: Any) {
+        if let url = curentRecipe.instrucionsUrl {
+            UIApplication.shared.open(URL(string: url)!, options:[:], completionHandler: nil)
+        }
     }
 }
 
@@ -99,11 +112,9 @@ extension DetailsRecipeTableViewController: UITableViewDataSource{
                 cell.setIngredient(name)
             }
             return cell
-            
         }
     }
   
-    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         if section == 1 {
             return DetailsHeaderSectionView.instanceFromNib() as? UIView

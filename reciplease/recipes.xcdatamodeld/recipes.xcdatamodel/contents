@@ -16,6 +16,7 @@
     <entity name="Recipe" representedClassName=".Recipe" syncable="YES" codeGenerationType="category">
         <attribute name="favorite" optional="YES" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="id" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="instrucionsUrl" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="rating" attributeType="Double" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="totalTimeInSeconds" optional="YES" attributeType="Decimal" syncable="YES"/>
@@ -26,7 +27,7 @@
     <elements>
         <element name="ImageUrl" positionX="203.96875" positionY="297.921875" width="128" height="73"/>
         <element name="Ingredient" positionX="456.48046875" positionY="208.77734375" width="128" height="88"/>
-        <element name="Recipe" positionX="219.0390625" positionY="15.66015625" width="128" height="163"/>
         <element name="IngredientLine" positionX="428.51171875" positionY="330.2578125" width="128" height="73"/>
+        <element name="Recipe" positionX="219.0390625" positionY="15.66015625" width="128" height="178"/>
     </elements>
 </model>

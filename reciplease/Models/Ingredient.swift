@@ -21,12 +21,8 @@ class Ingredient: NSManagedObject {
                 let ingredient = Ingredient(context: AppDelegate.viewContext)
                 ingredient.name = item
                 ingredient.recipe = recipe
-                
                 try? AppDelegate.viewContext.save()
             }
-            
         }
-        
     }
-
 }
