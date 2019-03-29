@@ -13,7 +13,8 @@ class FavoritesViewController: UIViewController {
      var recipes : [Recipe] = []
     
      @IBOutlet weak var tableView: UITableView!
-
+    @IBOutlet weak var noFavoriteView: UIView!
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +26,9 @@ class FavoritesViewController: UIViewController {
         reloadFavorite()
         self.title = "Favorites"
     }
+    private func showNoFavoritesView(_ value : Bool){
+        self.noFavoriteView.isHidden = !value
+    }
     
     // MARK: - Setup
     private func setup(){
@@ -35,6 +39,7 @@ class FavoritesViewController: UIViewController {
     private func reloadFavorite(){
         self.recipes = Recipe.favorites
         self.tableView.reloadData()
+        showNoFavoritesView((self.recipes.isEmpty ? true : false))
     }
     
     

@@ -52,6 +52,11 @@
                                         <state key="normal" title="Add">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onClickAdd:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3Ry-jx-xj3"/>
                                         </connections>
@@ -84,6 +89,11 @@
                                         <state key="normal" title="Clear">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onClickClear:" destination="9pv-A4-QxB" eventType="touchUpInside" id="jgw-MI-gf6"/>
                                         </connections>
@@ -119,6 +129,11 @@
                                 <state key="normal" title="Search for recipes">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="onClickSearch:" destination="9pv-A4-QxB" eventType="touchUpInside" id="8zu-Lt-Ssf"/>
                                 </connections>
@@ -281,7 +296,7 @@
                                                 </imageView>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="caU-Xl-Eim" customClass="RecipeRateView" customModule="reciplease" customModuleProvider="target">
                                                     <rect key="frame" x="304" y="10" width="100" height="70"/>
-                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="70" id="JOP-jS-AHj"/>
                                                         <constraint firstAttribute="width" constant="100" placeholder="YES" id="hRa-Ac-vnZ"/>
@@ -341,6 +356,11 @@
                                         <state key="normal" title="Show instructions">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                         <connections>
                                             <action selector="onClickShowInstructions:" destination="lKs-uB-tZt" eventType="touchUpInside" id="Hn3-Op-Jaf"/>
                                         </connections>
@@ -392,18 +412,47 @@
                                     <outlet property="delegate" destination="8rJ-Kc-sve" id="c9Q-iq-ZeC"/>
                                 </connections>
                             </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6H-eg-9Hn">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iYt-tk-lwR">
+                                        <rect key="frame" x="26" y="283" width="338" height="159.33333333333337"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="No Favorites !Please search your favorite recipe.">
+                                                <attributes>
+                                                    <color key="NSColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <font key="NSFont" size="28" name="Chalkduster"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" lineHeightMultiple="1.5" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iYt-tk-lwR" secondAttribute="trailing" constant="20" id="ZOf-sT-4yI"/>
+                                    <constraint firstItem="iYt-tk-lwR" firstAttribute="centerY" secondItem="S6H-eg-9Hn" secondAttribute="centerY" id="aG4-TF-rhM"/>
+                                    <constraint firstItem="iYt-tk-lwR" firstAttribute="leading" secondItem="S6H-eg-9Hn" secondAttribute="leading" constant="26" id="oU4-ig-PUw"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="S6H-eg-9Hn" firstAttribute="trailing" secondItem="O1u-W8-tvY" secondAttribute="trailing" id="4NF-2O-lWh"/>
                             <constraint firstItem="u2r-vZ-hCa" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="A5E-So-MC9"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="u2r-vZ-hCa" secondAttribute="trailing" id="E7G-pB-B3F"/>
                             <constraint firstItem="u2r-vZ-hCa" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="EF0-vl-Xct"/>
                             <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="u2r-vZ-hCa" secondAttribute="bottom" id="Jqp-1U-WeN"/>
+                            <constraint firstItem="S6H-eg-9Hn" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" id="cUG-bU-Bgy"/>
+                            <constraint firstItem="S6H-eg-9Hn" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" id="fTq-y3-EZr"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="S6H-eg-9Hn" secondAttribute="bottom" id="lUG-6z-lIt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="favorites" id="cPa-gy-q4n"/>
                     <connections>
+                        <outlet property="noFavoriteView" destination="S6H-eg-9Hn" id="rLP-Ez-eLy"/>
                         <outlet property="tableView" destination="u2r-vZ-hCa" id="WPq-RG-g58"/>
                         <segue destination="lKs-uB-tZt" kind="show" identifier="Favorite_Details" id="qst-IW-ysY"/>
                     </connections>
