@@ -13,6 +13,8 @@ class ListRecipesViewController: UIViewController {
     var ingredients : [String] = []
     var recipes : [Recipe] = []
     var currentPage : Int = 0
+    var isLoading  = false
+    var hasMoreAvailable = true
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activtyIndicator: UIActivityIndicatorView!
@@ -25,7 +27,9 @@ class ListRecipesViewController: UIViewController {
         setup()
         searchRecipes()//init first call with ingredients parameters
     }
-    
+    private func showMoreRecipe(){
+        searchRecipes()
+    }
     // MARK: - Setup
     private func setup(){
         self.tableView.register(UINib.init(nibName: cellIdentifier, bundle: Bundle.main), forCellReuseIdentifier: cellIdentifier)//register Cell
@@ -33,17 +37,25 @@ class ListRecipesViewController: UIViewController {
     
     // MARK: - Data
     private func searchRecipes(){
-       showActivity()
+        if isLoading { //cancel request if loading in progress
+            return
+        }
+        
+        showActivity()
+        isLoading = true
         NetworkManager.sharedInstance.searchRecipes(ingredients,startPage: currentPage, success: { (recipes) in
-            self.recipes = recipes
+            self.hasMoreAvailable = recipes.count >= recipeMaxRequest ? true : false
+            self.recipes.append(contentsOf: recipes)
             self.tableView.reloadData()
             self.hideActivity()
             if self.recipes.isEmpty {
                 self.showErrorNoRecipe()
             }
+            self.isLoading = false
         }) {//failed!
            self.hideActivity()
            self.showErrorNoRecipe()
+           self.isLoading = false
         }
     }
     
@@ -100,6 +112,15 @@ extension ListRecipesViewController: UITableViewDataSource{
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 180
+    }
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        if indexPath.row + 1 == recipes.count {
+            //Show more recipe if has available
+            currentPage += 1
+            if hasMoreAvailable{
+               showMoreRecipe()
+            }
+        }
     }
 }
 

@@ -14,7 +14,7 @@ class NetworkManager: NSObject {
 //MARK: - REQUESTS
 extension NetworkManager {
     private func apiUrl(_ service: String) -> String{
-        let service = service + "?_app_id=\(app_id)&_app_key=\(app_key)&maxResult=20"
+        let service = service + "?_app_id=\(app_id)&_app_key=\(app_key)&maxResult=\(recipeMaxRequest)"
         return service
     }
     

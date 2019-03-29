@@ -8,6 +8,10 @@
 
 import UIKit
 
+/**
+ RecipeInterface is an interface of Recipe
+ Used to populate View and Cell.
+ */
 protocol RecipeInterface {
      var title: String? { get }
      var subtitle: String? { get }

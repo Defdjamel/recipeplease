@@ -87,6 +87,10 @@ class Recipe: NSManagedObject {
     
 }
 
+/**
+ RecipeInterface is an interface of Recipe
+ Used to populate View and Cell.
+ */
 extension Recipe : RecipeInterface {
     var title: String? {
         return self.name
@@ -96,7 +100,7 @@ extension Recipe : RecipeInterface {
         if let ingredients =  ingredients {
             for ingredient in ingredients {
                 if let ingredient = ingredient as? Ingredient, let name  = ingredient.name{
-                    content += "\(name) "
+                    content += "\(name), "
                 }
             }
         }
