@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="344" height="179.5"/>
                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pID-cT-Nfh">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pID-cT-Nfh" customClass="GradientView" customModule="reciplease" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="116.5" width="344" height="63"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tomatoes" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3A9-Jb-QKZ">
@@ -39,7 +39,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="0.56595092024539873" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="3A9-Jb-QKZ" firstAttribute="top" secondItem="pID-cT-Nfh" secondAttribute="top" constant="8" id="ABD-tj-FKT"/>
                             <constraint firstAttribute="trailing" secondItem="3A9-Jb-QKZ" secondAttribute="trailing" constant="8" id="AWB-tJ-vzx"/>
@@ -49,6 +49,22 @@
                             <constraint firstItem="3A9-Jb-QKZ" firstAttribute="leading" secondItem="pID-cT-Nfh" secondAttribute="leading" constant="8" id="fAA-on-FqD"/>
                             <constraint firstAttribute="trailing" secondItem="K9V-tn-FSP" secondAttribute="trailing" constant="8" id="vrj-Zl-Ejp"/>
                         </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="startColor">
+                                <color key="value" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="endColor">
+                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="endLocation">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="startLocation">
+                                <real key="value" value="0.0"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="diagonalMode" value="NO"/>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="horizontalMode" value="NO"/>
+                        </userDefinedRuntimeAttributes>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qir-BZ-rVg" customClass="RecipeRateView" customModule="reciplease" customModuleProvider="target">
                         <rect key="frame" x="276" y="8" width="60" height="55"/>

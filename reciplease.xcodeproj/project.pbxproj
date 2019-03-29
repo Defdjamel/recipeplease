@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1A146B62224E6FD200AF83F4 /* UIViewViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A146B61224E6FD200AF83F4 /* UIViewViewController+Alert.swift */; };
 		1A146B64224E7D3600AF83F4 /* IBInspectableExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A146B63224E7D3600AF83F4 /* IBInspectableExtension.swift */; };
+		1A146B66224E7F1B00AF83F4 /* SHGradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A146B65224E7F1A00AF83F4 /* SHGradientView.swift */; };
 		1A27FB19224A7EC0009DE7A9 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB18224A7EC0009DE7A9 /* SearchViewController.swift */; };
 		1A27FB1B224A8A40009DE7A9 /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB1A224A8A40009DE7A9 /* SearchTableViewCell.swift */; };
 		1A27FB1D224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A27FB1C224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift */; };
@@ -73,6 +74,7 @@
 /* Begin PBXFileReference section */
 		1A146B61224E6FD200AF83F4 /* UIViewViewController+Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewViewController+Alert.swift"; sourceTree = "<group>"; };
 		1A146B63224E7D3600AF83F4 /* IBInspectableExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IBInspectableExtension.swift; sourceTree = "<group>"; };
+		1A146B65224E7F1A00AF83F4 /* SHGradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SHGradientView.swift; sourceTree = "<group>"; };
 		1A27FB18224A7EC0009DE7A9 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		1A27FB1A224A8A40009DE7A9 /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		1A27FB1C224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRecipeTableViewController.swift; sourceTree = "<group>"; };
@@ -325,6 +327,7 @@
 		1ADDC33F224935AF00A6B4D0 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				1A146B65224E7F1A00AF83F4 /* SHGradientView.swift */,
 				1A146B63224E7D3600AF83F4 /* IBInspectableExtension.swift */,
 				1ADDC340224935AF00A6B4D0 /* NSObject+Extension.swift */,
 				1ADDC341224935AF00A6B4D0 /* UIView+InstanceNib.swift */,
@@ -644,6 +647,7 @@
 				1A27FB1D224A8CF9009DE7A9 /* DetailsRecipeTableViewController.swift in Sources */,
 				1A27FB59224D3A2F009DE7A9 /* IngredientsTableViewCell.swift in Sources */,
 				1ADDC349224935AF00A6B4D0 /* Network.swift in Sources */,
+				1A146B66224E7F1B00AF83F4 /* SHGradientView.swift in Sources */,
 				1AB7FAEB224977DD00840DA8 /* recipes.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
