@@ -11,10 +11,11 @@ import CoreData
 private let cellIdentifier = "ListRecipeTableViewCell"
 class ListRecipesViewController: UIViewController {
     var ingredients : [String] = []
-    var recipes : [Recipe] = []
-    var currentPage : Int = 0
-    var isLoading  = false
-    var hasMoreAvailable = true
+  
+   private var recipes : [Recipe] = []
+   private var currentPage : Int = 0
+   private var isLoading  = false
+   private var hasMoreAvailable = true
 
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var activtyIndicator: UIActivityIndicatorView!
@@ -36,7 +37,7 @@ class ListRecipesViewController: UIViewController {
     }
     
     // MARK: - Data
-    private func searchRecipes(){
+    func searchRecipes(){
         if isLoading { //cancel request if loading in progress
             return
         }

@@ -8,14 +8,15 @@
 
 import UIKit
 import CoreData
-
+@testable import reciplease
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
     static var persistentContainer: NSPersistentContainer {
-        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+        
+        return (UIApplication.shared.delegate as! reciplease.AppDelegate).persistentContainer
     }
     static var viewContext: NSManagedObjectContext {
         return persistentContainer.viewContext

@@ -8,7 +8,6 @@
 
 import UIKit
 import CoreData
-
 class Ingredient: NSManagedObject {
     static func saveIngredients(_ items: [String], _ recipe : Recipe ) {
         for item in items {
