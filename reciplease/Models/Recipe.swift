@@ -77,6 +77,13 @@ class Recipe: NSManagedObject {
         return recipes
     }
     
+    static var favorites: [Recipe] {
+        let request: NSFetchRequest<Recipe> = Recipe.fetchRequest()
+        request.predicate = NSPredicate(format: "favorite == true ")
+        guard let recipes = try? AppDelegate.viewContext.fetch(request) else { return [] }
+        return recipes
+    }
+    
     
 }
 
