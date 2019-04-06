@@ -501,7 +501,6 @@
         <!--Navigation Controller-->
         <scene sceneID="XoK-1Y-EuL">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BOt-jU-ux0" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="baX-BU-edC" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" selectedImage="first" systemItem="search" id="vnt-mH-yhh"/>
                     <toolbarItems/>
@@ -524,6 +523,7 @@
                         <segue destination="49e-Tb-3d3" kind="relationship" relationship="rootViewController" id="KbV-Va-Num"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BOt-jU-ux0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-893" y="20"/>
         </scene>
@@ -532,6 +532,6 @@
         <image name="first" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="qst-IW-ysY"/>
+        <segue reference="QXc-DE-cXD"/>
     </inferredMetricsTieBreakers>
 </document>

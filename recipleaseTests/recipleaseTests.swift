@@ -66,7 +66,7 @@ class recipleaseTests: XCTestCase {
         let favCountAfter = favCountBefore + (recipe.isFavorite ? 1 : -1)
         
         //check new favorite count
-        XCTAssertEqual(reciplease.Recipe.favorites.count, favCountAfter , "StestAddFavorite is wrong")
+        XCTAssertEqual(reciplease.Recipe.favorites.count, favCountAfter , "testAddFavorite is wrong")
     }
     
     func testPerformanceExample() {

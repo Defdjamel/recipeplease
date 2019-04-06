@@ -21,25 +21,29 @@ class SearchViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
    
-    
-    // MARK: - Action
-    @IBAction func onClickAdd(_ sender: Any) {
-        if let text = searchTextField.text, !text.isEmpty {
-            ingredients.append(text)
-            searchTextField.text = ""
-            self.tableView.reloadData()
-        }
+    // MARK: - LifeCycle
+    private  func addIngredient(_ ingredient : String){
+        ingredients.append(ingredient)
+        self.tableView.reloadData()
     }
-    @IBAction func onClickClear(_ sender: Any) {
+    private  func  clearIngredients(){
         ingredients.removeAll()
         self.tableView.reloadData()
     }
-    @IBAction func onClickSearch(_ sender: Any) {
+    // MARK: - Action
+     @IBAction private func onClickAdd(_ sender: Any) {
+        if let text = searchTextField.text, !text.isEmpty {
+            addIngredient(text)
+            searchTextField.text = ""
+           
+        }
+    }
+    @IBAction private func onClickClear(_ sender: Any) {
+        clearIngredients()
+    }
+    @IBAction  private func onClickSearch(_ sender: Any) {
         print("search with : \(ingredients)")
         self.performSegue(withIdentifier: "searchVC_listVC", sender: self)
-       
-        
-        
     }
     
     

@@ -28,7 +28,7 @@ class ListRecipesViewController: UIViewController {
         setup()
         searchRecipes()//init first call with ingredients parameters
     }
-    private func showMoreRecipe(){
+    private func showMoreRecipes(){
         searchRecipes()
     }
     // MARK: - Setup
@@ -119,7 +119,7 @@ extension ListRecipesViewController: UITableViewDataSource{
             //Show more recipe if has available
             currentPage += 1
             if hasMoreAvailable{
-               showMoreRecipe()
+               showMoreRecipes()
             }
         }
     }
